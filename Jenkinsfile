@@ -1,8 +1,8 @@
-node {
-    stage('check tools') {
-        sh "node -v"
-        sh "npm -v"
-    }
+pipeline {
+   agent any
+      environment {
+         PATH='/usr/local/bin:/usr/bin:/bin'
+      }
 
     stage('checkout') {
         checkout scm
